@@ -1,0 +1,1304 @@
+@import "./variable";
+@import "./mixin";
+*,
+:after,
+:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// Discount 30%
+.Discount-Section {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.Discount-Container {
+  width: 1440px;
+  height: 40px;
+  background-color: $black;
+  color: $white;
+  gap: 12px;
+  @include flex-center;
+  position: relative;
+}
+.Discount-Container__Content {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  font-family: $Inter;
+}
+.Discount-Container__close {
+  position: absolute;
+  left: 1404px;
+  cursor: pointer;
+}
+
+.Discount-Container__btn {
+  color: $orange;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+  font-family: $Inter;
+  content: "";
+  border-bottom: 1px solid $orange;
+  cursor: pointer;
+}
+
+header {
+  max-width: 100vw;
+  @include flex-center;
+}
+
+.Header-Container {
+  width: 1440px;
+  padding: 0px 160px 0px 160px;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $HeaderBackground;
+  //   Logo
+  .Header-Container__Logo {
+    @include Logo;
+    cursor: pointer;
+  }
+  // burger - menu
+  .burger-icon {
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    display: none;
+  }
+
+  //   List
+
+  .nav__ul {
+    width: 362px;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  .nav__ul li {
+    cursor: pointer;
+  }
+  select {
+    background-color: transparent;
+    border: 1px solid #ffc95c;
+    cursor: pointer;
+  }
+  // search bar
+  .Header-Container__Searchbar {
+    cursor: pointer;
+  }
+
+  // burger
+}
+// section 2 //
+.Background-Section {
+  max-width: 100%;
+  @include flex-center;
+  flex-wrap: wrap;
+}
+.Container {
+  width: 1440px;
+  display: flex;
+  position: relative;
+  height: 820px;
+  background: linear-gradient(#ffc95c, #ffab00);
+}
+.Container__Content-Box {
+  max-width: 100%;
+  position: absolute;
+  left: 732px;
+  top: 222px;
+
+  .Content__Big {
+    max-width: 100%;
+    font-weight: 500;
+    font-size: 80px;
+    line-height: 84px;
+    letter-spacing: -3px;
+    font-family: $Poppins;
+  }
+  .blue {
+    max-width: 100%;
+    font-weight: 500;
+    font-size: 80px;
+    line-height: 84px;
+    letter-spacing: -3px;
+    font-family: $Poppins;
+    color: #377dff;
+  }
+  .Text-Container {
+    max-width: 100%;
+  }
+  .Container__p {
+    margin-top: 8px;
+    font-family: $Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .btn {
+    width: 234px;
+    height: 56px;
+    background-color: #141718;
+    color: $white;
+    font-family: $Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: -0.4000000059604645px;
+    text-align: center;
+    padding: 12px 56px 12px 56px;
+    border-radius: 8px;
+    margin-top: 28px;
+    cursor: pointer;
+  }
+}
+// section 3 //
+.LogoIpsum-Section {
+  max-width: 100%;
+  @include flex-center;
+  .LogoipsumContainer {
+    max-width: 100%;
+    background-color: $white;
+    @include flex-center;
+    gap: 24px;
+  }
+  .LogoIpsum-Icon {
+    margin: 40px 0px;
+    width: 167px;
+    height: 64px;
+
+    object-fit: contain;
+    cursor: pointer;
+  }
+}
+// Section 4
+.New-Arrivals-Section {
+  max-width: 100%;
+  @include flex-center;
+  .NewArrivals-Container {
+    max-width: 100%;
+    .NewArrivals-Container__Flex-Container {
+      display: flex;
+      max-width: 100%;
+      flex-wrap: wrap;
+
+      gap: 24px;
+    }
+
+    .NewArrivals-Container__Title {
+      margin-top: 48px;
+      margin-bottom: 48px;
+      @include SectionTitle;
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .Container__Headphones {
+      border: 1px solid $white;
+      position: relative;
+      width: 262px;
+      height: 349px;
+      background-color: $ImageBackground;
+      .Headphones__New-Icon {
+        width: 67px;
+        height: 24px;
+        border-radius: 4px;
+        padding: 4px 14px 4px 14px;
+        background-color: $white;
+        margin-left: 16px;
+        margin-top: 16px;
+        @include NEW;
+      }
+      .Icon2 {
+        position: absolute;
+        left: 0px;
+        z-index: 999;
+      }
+
+      .Headphones__Heart-Icon {
+        position: absolute;
+        right: 16px;
+        top: 16px;
+      }
+      .Headphones__AddToCartBtn {
+        width: 230px;
+        height: 46px;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: -0.4px;
+        color: #fefefe;
+        background-color: $black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        position: absolute;
+        left: 16px;
+        bottom: 16px;
+        cursor: pointer;
+      }
+    }
+    .NewArrivals-Container-Card1__Content {
+      margin-top: 12px;
+      width: 262px;
+      height: 78px;
+      @include NewArrivalsContent;
+    }
+    .NewArrivals-Container-Card1__Price {
+      @include NewArrivalsPrice;
+    }
+  }
+  .HeadPhones {
+    width: 100%;
+    height: 230px;
+  }
+  .HeadPhones2 {
+    width: 100%;
+  }
+  .HeadPhones3 {
+    width: 100%;
+  }
+  .HeadPhones4 {
+    width: 100%;
+  }
+}
+// Section 5
+.Shop-Collection-Section {
+  max-width: 100%;
+  @include flex-center;
+  .ShopCollectionBox {
+    max-width: 100%;
+  }
+  .Shop-Collection {
+    @include SectionTitle;
+    max-width: 100%;
+    height: 44px;
+    margin: 0 auto;
+    margin-top: 96px;
+    margin-bottom: 48px;
+    position: relative;
+  }
+
+  .Flex-Container {
+    max-width: 100%;
+    display: flex;
+    // justify-content: space-around;
+    .Flex-Container__Title {
+      font-family: $Poppins;
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 38px;
+      letter-spacing: -0.6px;
+      position: absolute;
+      bottom: 88px;
+      left: 48px;
+    }
+    .Flex-Container__Collection {
+      width: 98px;
+      position: absolute;
+      left: 48px;
+      bottom: 48px;
+      color: #121212;
+      font-family: $Inter;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 28px;
+      letter-spacing: -0.4px;
+      border: none;
+      background-color: $ImageBackground;
+      content: "";
+      border-bottom: 1px solid $BlackUnderline;
+      cursor: pointer;
+    }
+    .Flex-Container__MainContainer {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+    }
+    // Left Container //
+    .Flex-Container__Left-Container {
+      max-width: 100%;
+      background-color: $ImageBackground;
+      position: relative;
+      .Left-Container__Icon {
+        width: 548px;
+      }
+      // Right Container //
+    }
+    .Flex-Container__Right-Container {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .Flex-Container__Top-Container {
+      max-width: 100%;
+
+      background-color: $ImageBackground;
+      position: relative;
+    }
+    .Flex-Container__Bottom-Container {
+      max-width: 100%;
+      position: relative;
+    }
+  }
+  .Collection:only-of-type {
+    left: 32px;
+    bottom: 40px;
+  }
+  .Headband:only-of-type {
+    left: 32px;
+    bottom: 80px;
+  }
+}
+// Section 6
+.section6 {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .Flex-Container {
+    max-width: 100%;
+  }
+  .section6-H2 {
+    @include SectionTitle;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+  .section6__Box {
+    max-width: 262px;
+    margin-top: 12px;
+  }
+  .section6__Top-Container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    gap: 24px;
+
+    .section6__First-Card {
+      max-width: 100%;
+      background-color: $ImageBackground;
+      position: relative;
+    }
+    .section6__Hot-Icon {
+      width: 67px;
+      height: 24px;
+      border-radius: 4px;
+      padding: 4px 14px 4px 14px;
+      background-color: $white;
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      @include NEW;
+    }
+    .Stars {
+      width: 16px;
+      gap: 2px;
+      display: flex;
+      margin-bottom: 4px;
+    }
+    .section6__Icon1-Content {
+      @include NewArrivalsContent;
+    }
+    .section6__Icon1-Price {
+      @include NewArrivalsPrice;
+    }
+  }
+  .section6__Bottom-Container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 48px;
+    max-width: 100%;
+    gap: 24px;
+    .section6__Icon1 {
+      object-fit: contain;
+      width: 262px;
+      height: 349px;
+    }
+    .section6__Hot-Icon {
+      width: 67px;
+      height: 24px;
+      border-radius: 4px;
+      padding: 4px 14px 4px 14px;
+      background-color: $white;
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      @include NEW;
+      z-index: 999999;
+    }
+    .section6__Icon1-Content {
+      @include NewArrivalsContent;
+    }
+    .section6__Icon1-Price {
+      @include NewArrivalsPrice;
+    }
+    .section6__First-Card {
+      max-width: 100%;
+      background-color: $ImageBackground;
+      position: relative;
+    }
+    .Stars {
+      width: 16px;
+      gap: 2px;
+      display: flex;
+      margin-bottom: 4px;
+    }
+  }
+}
+// Section 7
+.Double-Image {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 100px;
+  .Left-Container {
+    max-width: 720px;
+  }
+
+  .Right-Container {
+    width: 720px;
+    height: 532px;
+    background-color: #ffab0066;
+  }
+  .Right-Container__Content {
+    max-width: 100%;
+    margin: 172px 196px 0px 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .promotion {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    font-family: $Inter;
+    color: $blue;
+  }
+  .h3 {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -0.4px;
+    font-family: $Poppins;
+    color: #121212;
+  }
+  .bottom-text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    font-family: $Inter;
+    color: #121212;
+  }
+  .ShopNow {
+    max-width: 166px;
+    height: 40px;
+    border-radius: 8px;
+    padding: 6px 40px 6px 40px;
+    gap: 8px;
+    background-color: $black;
+    color: $white;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -0.4;
+    text-align: center;
+    font-family: $Inter;
+    margin: 24px 0px 0px 72px;
+    cursor: pointer;
+  }
+}
+// Section 8
+.Services {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.Services__Flex-Container {
+  width: 1120px;
+  margin: 40px 0px 40px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  .Box4 {
+    width: 262px;
+    height: 220px;
+    display: flex;
+    background-color: $ImageBackground;
+    position: relative;
+  }
+  .Box4-img {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left: 32px;
+    top: 48px;
+  }
+  .Box4__Content {
+    width: 198px;
+    height: 60px;
+  }
+  .Box4__Content-box {
+    position: absolute;
+    left: 32px;
+    top: 112px;
+  }
+  .Box4-Content-p1 {
+    @include SecureTitle;
+    cursor: pointer;
+  }
+  .Box4-Content-p2 {
+    @include SecureSubtitle;
+  }
+}
+// section 9
+.Newsletter {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  .Services__Container {
+    width: 1440px;
+    height: 360px;
+    position: relative;
+  }
+  .Content__Title {
+    @include SectionTitle;
+  }
+  .Content__Subtitle {
+    font-family: $Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+  .Container__Content {
+    width: 540px;
+    // height: 82px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    position: absolute;
+    top: 101px;
+    left: 450px;
+  }
+}
+// footer
+footer {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .Footer_Container {
+    background-color: $black;
+    width: 1440px;
+    display: flex;
+    justify-content: center;
+    .Container__Inner {
+      position: relative;
+      max-width: 100%;
+      height: 249px;
+      background-color: $black;
+      display: flex;
+    }
+    .Inner__Top-Container {
+      width: 544px;
+      margin-top: 80px;
+      display: flex;
+    }
+    .vertical {
+      border-right: 1px solid #6c7275;
+      height: 24px;
+    }
+    .Top-Container__Logo {
+      width: 120px;
+      font-family: $Poppins;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 24px;
+      color: $white;
+      cursor: pointer;
+    }
+    .headphone {
+      margin-left: 32px;
+      font-family: $Inter;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      text-align: left;
+      color: #e8ecef;
+      cursor: pointer;
+    }
+    .flex-end {
+      width: 576px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .Inner__ul {
+      display: flex;
+      width: 392px;
+      height: 22px;
+      gap: 40px;
+      margin-top: 80px;
+      color: #fefefe;
+      font-family: $Inter;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0px;
+      list-style: none;
+    }
+    .Inner__ul li {
+      cursor: pointer;
+    }
+
+    .Inner__Bottom-Container {
+      width: 1120px;
+      height: 56px;
+      margin-top: 177px;
+      position: absolute;
+      left: 0;
+      bottom: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      content: "";
+      border-top: 0.5px solid #6c7275;
+    }
+    .Copyright {
+      width: 265px;
+      height: 20px;
+      color: #e8ecef;
+      font-family: $Poppins;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      cursor: pointer;
+    }
+    .Privacy {
+      margin-left: 28px;
+      width: 85px;
+      height: 20px;
+      font-family: $Poppins;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 20px;
+      color: #fefefe;
+      cursor: pointer;
+    }
+    .terms {
+      margin-left: 28px;
+      width: 79px;
+      height: 20px;
+      font-family: $Poppins;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 20px;
+      cursor: pointer;
+      color: #fefefe;
+    }
+    .Bottom-Container__Left-Container {
+      display: flex;
+      text-align: center;
+      align-items: center;
+    }
+    .Iconx3 {
+      width: 120px;
+      height: 24px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .icons {
+      cursor: pointer;
+    }
+  }
+}
+
+// 1024 ~ 1200 ======================================
+@media (min-width: 1024px) and (max-width: 1200px) {
+  // Discount-section
+
+  .Discount-Container__close {
+    left: 1180px;
+    position: sticky;
+  }
+
+  // header
+
+  .Header-Container {
+    max-width: 100%;
+  }
+
+  // Background-Section
+
+  .Container__Content-Box {
+    left: 130px;
+    top: 100px;
+    scale: 80%;
+  }
+
+  // LogoIpsum
+  .LogoipsumContainer {
+    flex-wrap: wrap;
+  }
+
+  // New Arrivals
+
+  .NewArrivals-Container__Flex-Container {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .NewArrivals-Container__Title {
+    display: flex;
+  }
+  .Flex-Container__Full-Card {
+    max-width: 100vw;
+  }
+
+  // Shop Collection
+
+  .Shop-Collection-Section {
+    flex-wrap: wrap;
+  }
+  .Shop-Collection {
+    display: flex;
+  }
+  .Flex-Container__MainContainer {
+    flex-wrap: wrap;
+  }
+
+  // Best Seller
+
+  .section6-H2 {
+    display: flex;
+  }
+  .section6__Top-Container {
+    justify-content: space-around;
+  }
+  .section6__Bottom-Container {
+    justify-content: space-around;
+  }
+
+  // Double-Image
+
+  // Services
+
+  .Services__Flex-Container {
+    justify-content: space-around;
+    gap: 24px;
+  }
+
+  // Newsletter
+  .Newsletter {
+    justify-content: center;
+    height: 333px;
+  }
+
+  .Services__Container {
+    scale: 85%;
+    .Content__Title {
+      font-size: 50px;
+    }
+    .Content__Subtitle {
+      font-size: 26px;
+      margin-top: 30px;
+    }
+  }
+
+  // footer
+
+  .Container__Inner {
+    flex-wrap: wrap;
+    margin-right: 210px;
+  }
+  .flex-end {
+    position: absolute;
+    left: 225px;
+    bottom: 148px;
+  }
+  .Bottom-Container__Left-Container {
+    justify-content: space-between;
+  }
+
+  .Iconx3 {
+    position: absolute;
+    top: -10;
+    left: 680px;
+  }
+  footer .Footer_Container .Inner__Bottom-Container {
+    width: 800px;
+  }
+}
+// 768 ~ 1023 =========================================
+@media (min-width: 768px) and (max-width: 1023px) {
+  //burger
+  .Header-Container .burger-icon {
+    display: flex;
+  }
+  .nav {
+    display: none;
+  }
+  .Header-Container__Searchbar {
+    position: relative;
+    right: 40px;
+  }
+  .nav__ul {
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .burger-menu:hover .nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: -135px;
+    top: 90px;
+    z-index: 500;
+    cursor: pointer;
+  }
+  // Discount-section
+
+  .Discount-Container__close {
+    left: 1000px;
+    position: sticky;
+  }
+
+  // header
+
+  .Header-Container {
+    max-width: 100%;
+  }
+
+  // Background-Section
+
+  .Container__Content-Box {
+    left: 130px;
+    top: 100px;
+    scale: 70%;
+  }
+
+  // LogoIpsum
+  .LogoipsumContainer {
+    flex-wrap: wrap;
+  }
+
+  // New Arrivals
+
+  .NewArrivals-Container__Flex-Container {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .NewArrivals-Container__Title {
+    display: flex;
+    justify-content: center;
+  }
+  .Flex-Container__Full-Card {
+    max-width: 100vw;
+  }
+
+  // Shop Collection
+
+  .Shop-Collection-Section {
+    flex-wrap: wrap;
+  }
+  .Shop-Collection {
+    display: flex;
+    justify-content: center;
+  }
+  .Flex-Container__MainContainer {
+    flex-wrap: wrap;
+  }
+
+  // Best Seller
+
+  .section6-H2 {
+    display: flex;
+    justify-content: center;
+  }
+  .section6__Top-Container {
+    justify-content: space-around;
+  }
+  .section6__Bottom-Container {
+    justify-content: space-around;
+  }
+
+  // Double-Image
+
+  // Services
+
+  .Services__Flex-Container {
+    justify-content: space-around;
+    gap: 24px;
+  }
+
+  // Newsletter
+  .Newsletter {
+    justify-content: center;
+    height: 315px;
+  }
+
+  .Services__Container {
+    scale: 75%;
+    .Content__Title {
+      font-size: 50px;
+    }
+    .Content__Subtitle {
+      font-size: 26px;
+      margin-top: 30px;
+    }
+  }
+
+  // footer
+
+  .Container__Inner {
+    flex-wrap: wrap;
+  }
+  .flex-end {
+    position: absolute;
+    left: -185px;
+    bottom: 105px;
+  }
+  .Bottom-Container__Left-Container {
+    justify-content: space-between;
+  }
+  .Inner__Bottom-Container {
+    max-width: 100%;
+  }
+  .Iconx3 {
+    position: absolute;
+    top: -80px;
+    left: 300px;
+  }
+}
+// 600 ~ 767 ========================================
+@media (min-width: 600px) and (max-width: 767px) {
+  // Discount-section
+
+  .Discount-Container__close {
+    left: 768px;
+    position: sticky;
+  }
+
+  // header
+  .Header-Container .burger-icon {
+    display: flex;
+  }
+  .nav {
+    display: none;
+  }
+  .Header-Container__Searchbar {
+    position: relative;
+    right: 40px;
+  }
+  .nav__ul {
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .burger-menu:hover .nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: -135px;
+    top: 90px;
+    z-index: 500;
+    cursor: pointer;
+  }
+
+  .Header-Container {
+    max-width: 100%;
+    padding: 0px 80px 0px 120px;
+  }
+
+  // Background-Section
+
+  .Container__Content-Box {
+    left: 130px;
+    top: 100px;
+    scale: 60%;
+  }
+
+  //burger
+
+  // LogoIpsum
+  .LogoipsumContainer {
+    flex-wrap: wrap;
+  }
+
+  // New Arrivals
+
+  .NewArrivals-Container__Flex-Container {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .NewArrivals-Container__Title {
+    display: flex;
+    justify-content: center;
+  }
+  .Flex-Container__Full-Card {
+    max-width: 100%;
+  }
+
+  // Shop Collection
+
+  .Shop-Collection-Section {
+    flex-wrap: wrap;
+  }
+  .Shop-Collection {
+    display: flex;
+    justify-content: center;
+  }
+  .Flex-Container__MainContainer {
+    flex-wrap: wrap;
+  }
+
+  // Best Seller
+
+  .section6-H2 {
+    display: flex;
+    justify-content: center;
+  }
+  .section6__Top-Container {
+    justify-content: space-around;
+  }
+  .section6__Bottom-Container {
+    justify-content: space-around;
+  }
+
+  // Double-Image
+
+  // Services
+
+  .Services__Flex-Container {
+    justify-content: space-around;
+    gap: 24px;
+  }
+
+  // Newsletter
+  .Newsletter {
+    justify-content: center;
+    height: 280px;
+  }
+
+  .Services__Container {
+    scale: 55%;
+    .Content__Title {
+      font-size: 50px;
+    }
+    .Content__Subtitle {
+      font-size: 26px;
+      margin-top: 30px;
+    }
+  }
+
+  // footer
+
+  .Container__Inner {
+    flex-wrap: wrap;
+  }
+  .flex-end {
+    position: absolute;
+    display: flex;
+    right: 154px;
+    bottom: 100px;
+  }
+  .Bottom-Container__Left-Container {
+    justify-content: space-between;
+  }
+  .Inner__Bottom-Container {
+    max-width: 100%;
+  }
+  .Iconx3 {
+    position: absolute;
+    top: -80px;
+    left: 300px;
+  }
+}
+// media 0~600 =======================================
+@media (max-width: 599px) {
+  // Discount-section
+
+  .Discount-Container__close {
+    left: 768px;
+    position: sticky;
+  }
+
+  // header
+  .Header-Container .burger-icon {
+    display: flex;
+    width: 40px;
+  }
+  .nav {
+    display: none;
+  }
+  .Header-Container__Searchbar {
+    position: relative;
+    right: 40px;
+  }
+  .nav__ul {
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .burger-menu:hover .nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: -135px;
+    top: 90px;
+    z-index: 500;
+    cursor: pointer;
+  }
+
+  .Header-Container {
+    max-width: 100%;
+    padding: 0px 80px 0px 40px;
+  }
+
+  // Background-Section
+  .Container__Content-Box {
+    left: 130px;
+    top: 0px;
+    scale: 50%;
+  }
+
+  //burger
+
+  // LogoIpsum
+  .LogoipsumContainer {
+    flex-wrap: wrap;
+  }
+
+  // New Arrivals
+
+  .NewArrivals-Container__Flex-Container {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .NewArrivals-Container__Title {
+    display: flex;
+    justify-content: center;
+  }
+  .Flex-Container__Full-Card {
+    max-width: 100%;
+  }
+
+  // Shop Collection
+
+  .Shop-Collection-Section {
+    flex-wrap: wrap;
+  }
+  .Shop-Collection {
+    display: flex;
+    justify-content: center;
+  }
+  .Flex-Container__MainContainer {
+    flex-wrap: wrap;
+  }
+
+  // Best Seller
+
+  .section6-H2 {
+    display: flex;
+    justify-content: center;
+  }
+  .section6__Top-Container {
+    justify-content: space-around;
+  }
+  .section6__Bottom-Container {
+    justify-content: space-around;
+  }
+
+  // Double-Image
+
+  .Double-Image .Right-Container__Content {
+    margin: 100px 40px 0px 50px;
+  }
+  .left-pic {
+    max-width: 100%;
+  }
+
+  // Services
+
+  .Services__Flex-Container {
+    justify-content: space-around;
+    gap: 24px;
+  }
+
+  // Newsletter
+  .Newsletter {
+    justify-content: center;
+    height: 250px;
+  }
+
+  .Services__Container {
+    scale: 40%;
+    .Content__Title {
+      font-size: 50px;
+    }
+    .Content__Subtitle {
+      font-size: 26px;
+      margin-top: 30px;
+    }
+  }
+
+  // footer
+
+  .Footer_Container {
+    max-width: 100%;
+  }
+
+  .Container__Inner {
+    flex-wrap: wrap;
+  }
+  .flex-end {
+    position: absolute;
+    display: flex;
+    max-width: 100%;
+    right: 24px;
+    bottom: 108px;
+  }
+
+  .Bottom-Container__Left-Container {
+    justify-content: space-between;
+    max-width: 100%;
+  }
+  .Inner__Bottom-Container {
+    max-width: 100%;
+  }
+  .Iconx3 {
+    position: relative;
+    top: -100px;
+    left: -120px;
+    max-width: 100%;
+    gap: 20px;
+  }
+}
+.container {
+  width: 1600px;
+}

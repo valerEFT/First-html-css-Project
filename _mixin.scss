@@ -1,0 +1,63 @@
+@import "./variable";
+
+@mixin Logo {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  width: 105px;
+  height: 24px;
+  font-family: $Poppins;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin NewArrivalsContent {
+  font-family: $Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+@mixin NewArrivalsPrice {
+  font-family: $Inter;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+@mixin NEW {
+  //styleName: Hairline 1;
+  font-family: $Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+@mixin SectionTitle {
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: -0.4px;
+  font-weight: 500;
+  color: $black;
+  font-family: $Poppins;
+}
+@mixin SecureTitle {
+  font-family: $Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0px;
+}
+@mixin SecureSubtitle {
+  font-family: $Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
